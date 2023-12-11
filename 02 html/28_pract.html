@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../01 Images/tick1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Position properties</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        header {
+            padding: 0px 20px;
+            display: flex;
+            background-color: grey;
+            color: white;
+            width: 100%;
+            /* position: fixed; */
+            position: sticky;   /* If we set the position sticky we also have to set the top position*/
+            top: 0px;
+        }
+        figure img {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px ;
+            box-shadow: 0px 0px 10px 8px rgb(0, 38, 255);
+            position: relative;
+            top: 40px;
+        }
+        nav > ul {
+            display: flex;
+        }
+        nav > ul > li {
+            font-size: 20px;
+            list-style: none;
+            padding: 40px 20px;
+            cursor: pointer;
+            position: relative;
+        }
+        .banner {
+            height: 100vh;
+            width: 100%;
+            background-color: skyblue;
+        }
+        .banner .box {
+            padding: 80px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .section-content {
+            width: 1200px;
+            height: 250px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+        .section-item {
+            flex-basis: 30%;
+            margin: 1.5%;
+            position: relative;
+        }
+        .section-item img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+        .content {
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            color: white;
+            border-radius: 20px;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            transition: 0.45s;
+            transform: scaleY(0);
+            transform-origin: left;
+        }
+        .section-item:hover .content {
+            transform: scaleY(1);
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .sub-menu li {
+            text-align: center;
+            list-style: none;
+            padding: 10px 8px;
+
+        }
+        .sub-menu {
+            width: 120px;
+            border-radius: 10px;
+            top: 80%;
+            background-color: rgb(66, 65, 65);
+            position: absolute;
+            left: 0px;
+            transition: 0.6s;
+            transform: scaleY(0);
+            transform-origin: top;
+        }
+        nav>ul>li:hover .sub-menu {
+            transform: scaleY(1);
+        }
+        .icons {
+            position: fixed;
+            right: 10px;
+            top: 40%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .icons i {
+            background-color: blue;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            margin-bottom: 10px;
+            font-size: 35px;
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        In CSS, there are several properties related to positioning elements on a web page.  
+    
+        1. "static" (default): Element follows the normal flow of the document. It is not affected by the top, bottom, left, right, and z-index properties.
+
+        2. "relative": Element is positioned relative to its normal position. It can be moved using top, bottom, left, and right properties.
+
+        The surrounding elements still respect the space occupied by the relatively positioned element, even if it is moved.
+
+        3. "absolute": Element is positioned relative to its nearest positioned ancestor (or the initial containing block if no ancestor is positioned). It is removed from the normal flow and other elements are positioned as if it doesn't exist.
+
+        When an element is positioned absolutely (position: absolute), it is taken out of the normal flow of the document, and other elements can occupy the space it would have originally occupied.
+        
+        4. "fixed": Element is positioned relative to the viewport. It is removed from the normal flow and does not scroll with the page.
+
+        5. "sticky": Element behaves like a relative position until it reaches a specified threshold, then it becomes fixed until it passes another threshold.
+     -->
+
+    <div class="icons">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+    <header>
+        <figure>
+            <img src="../01 Images/mac_ios.jpg" alt="logo">
+        </figure>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>
+                    Course
+                    <ul class="sub-menu">
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Js</li>
+                    </ul>
+                </li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error veritatis quae architecto soluta sequi ipsum quam quia accusantium excepturi, molestiae accusamus beatae. Eos itaque officiis pariatur tenetur in. Minus aliquid, vero vel perferendis ipsa enim repudiandae delectus excepturi maxime sit?
+        </div>
+    </section>
+
+    <div class="section-content">
+        <div class="section-item">
+            <img src="../01 Images/apple.jpg" alt="">
+            <div class="content">
+                <h2>CSE</h2>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eius, dolorem maxime natus incidunt voluptatem repudiandae et vitae tempora sunt?</P>
+            </div>
+        </div>
+        <div class="section-item">
+            <img src="../01 Images/macbook.jpg" alt="">
+            <div class="content">
+                <h2>ECE</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tenetur accusantium magnam, vitae nulla praesentium quod quos beatae exercitationem , expedita voluptatem quo.</p>
+            </div>
+        </div>
+        <div class="section-item">
+            <img src="../01 Images/keyboard.jpg" alt="">
+            <div class="content">
+                <h2>ME</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nisi consectetur numquam beatae exercitationem placeat qui, facilis explicabo quidem aperiam.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

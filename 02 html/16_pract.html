@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <style>
+    /* body{
+        box-sizing: border-box;
+    } */
+    h1,h3{
+        margin: auto;
+        font-style: italic;
+        width: 200px;
+    }
+    h4{
+        margin: 6px;
+        font-style: italic;
+        color: orange;
+    }
+    p{
+        margin: 2px;
+    }
+    .box{
+        border: 2px solid black;
+        margin: 20px auto;
+        padding: 4px;
+        width: 600px;
+        background-color: rgb(200, 220, 236);
+    }  
+    .paragraph{
+        border: 2px solid blue;
+        border-radius: 6px;
+        margin: 20px;
+        padding: 4px;
+        text-align: justify;
+        background-color: rgb(231, 184, 245);
+    }
+    #First{
+        float: left;
+        width: 40%;
+    }
+    #Second{
+        float: right;
+        width: 40%;
+    }
+    #Third{
+        clear: both;
+        float: left;
+        width: 40%
+    }
+    #Fourth{
+        clear: left;
+        float: right;
+        width: 40%;
+    }
+    </style>
+</head>
+<body>
+    <h1>ALIGNMENT</h1>
+    <div class="box">
+        <h3>Float and clear</h3>
+        <div id="First" class="paragraph">
+            <h4>First</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nesciunt, est necessitatibus saepe, dolor alias quaerat recusandae sequi non maxime aspernatur quas omnis at voluptatum vel hic ea minima fuga?
+            </p>
+        </div>
+
+        <div id="Second" class="paragraph">
+            <h4>Second</h4>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi culpa, molestias ad sequi ipsum in blanditiis est dolores. Officiis, hic. Incidunt ratione magni alias neque animi quae porro ad voluptatibus.
+            </p>
+        </div>
+
+        <div id="Third" class="paragraph">
+            <h4>Third</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non nobis voluptates aliquam omnis similique, obcaecati delectus minus officiis necessitatibus illum, nostrum expedita natus eligendi cumque consequuntur, impedit illo enim?
+            </p>
+        </div>
+        
+        <div id="Fourth" class="paragraph">
+            <h4>fourth</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, nisi sed minus modi deleniti nihil provident autem tempore recusandae tenetur fugit dicta maiores libero, nemo voluptate aspernatur aperiam ipsam voluptas!
+            </p>
+        </div>
+    </div>
+</body>
+</html>

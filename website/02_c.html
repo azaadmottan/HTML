@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-language</title>
+    <link rel="shortcut icon" href="../01 Images/fav-6.png" type="image/x-icon">
+    <link rel="stylesheet" href="02_web.css">
+
+</head>
+<body>
+    <header id="header" class="header head-resp">
+        <figure>
+            <a href="01_web.html"><h2>code<span>Master</span></h2>
+            </a>
+        </figure>
+        <div class="courses">
+            Course <span class="arrow">&#x27A4;</span>
+            <ul class="course-menu">
+                <li>C</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>Html</li>
+                <li>Css</li>
+                <li>JavaScript</li>
+                <li>Php</li>
+                <li>Mongo DB</li>
+                <li>My Sql</li>
+            </ul>
+        </div>
+        <div class="burger" id="burger" onclick="showNav()">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+        <div class="cross" id="cross" onclick="showNav()">&#9587</div>
+    </header>
+
+    <div class="search">
+        <input type="text" id="search" onkeyup="performSearch()" placeholder="Search..." autocomplete="off">
+        <ul id="search-result" class="search-box"></ul>
+    </div>
+
+    <button onclick="topFunction()" id="topBtn">&#8679; Top</button>
+    
+    <span class="canvas" id="canvas" onclick="showSideMenu()">&#9776;</span>
+
+    <section class="side-menu" id="side-menu">
+        <h2>C - language</h2>
+        <div class="content">
+            <ul>
+                <li ><a href="#intro">Introduction to C.</a></li>
+                <li><a href="#struct">Structure of C Program.</a></li>
+                <li><a href="#datatypes">Data types in C.</a></li>
+                <li><a href="#variableconstant">Variables & Constants in C.</a></li>
+                <li><a href="#operator">Operator in C.</a></li>
+                <li><a href="#control">Control flow in  C.</a></li>
+                <li><a href="#conditional">Conditional statement in C.</a></li>
+                <li><a href="#loop">Loops in C.</a></li>
+                <li><a href="#jump">Jumps statement in C.</a></li>
+                <li><a href="#array">Arrays in C.</a></li>
+                <li><a href="#funct">Functions in C.</a></li>
+                <li><a href="#recursion">Recursion in C.</a></li>
+                <li><a href="#intro">Introduction to C.</a></li>
+                <li><a href="#pointer">Pointer in C.</a></li>
+                <li><a href="#string">String in C.</a></li>
+                <li><a href="#stringfunct">String functions in C.</a></li>
+                <li><a href="#struct">Structure in C.</a></li>
+                <li><a href="#file">File Input/Output in C.</a></li>
+                <li><a href="#filefunct">File handling functions in C.</a></li>
+                <li><a href="#filemodes">File modes in C.</a></li>
+                <li><a href="#preprocessor">Preprocessor directives in C.</a></li>
+                <li><a href="#advance">Some advance topics in C.</a></li>
+            </ul>
+        </div>
+        <span class="close" id="close-menu" onclick="hideSideMenu()">&times;</span>
+
+    </section>
+
+    <section class="section-area" id="">
+        <h2 class="heading main-heading">C Programming Language Tutorial</h2>
+
+        <h2 class="heading" id="intro">Introduction to C</h2>
+        <div class="para">
+            C is a general-purpose programming language that was developed in the early 1970s by Dennis Ritchie at Bell Laboratories. It is a high-level language that provides low-level access to computer memory through pointers, making it efficient and suitable for system-level programming.
+        </div>
+        <div class="para">
+            C is known for its simplicity, efficiency, and portability. It was designed to be a relatively small language with a minimal set of keywords and constructs, which makes it easy to learn and write code in. The language provides a structured approach to programming, allowing developers to break down programs into modules or functions.
+        </div>
+        <div class="para">
+            One of the key features of C is its ability to directly manipulate memory, which gives programmers precise control over the hardware. This feature makes C well-suited for developing operating systems, embedded systems, device drivers, and other system-level software.
+        </div>
+        <div class="para">
+            C is a procedural language, meaning that programs are organized into functions that manipulate data. It supports a wide range of data types, including integers, floating-point numbers, characters, and arrays. C also provides operators for performing arithmetic, logical, and bitwise operations on these data types.
+        </div>
+        <div class="para">
+            Another important aspect of C is its extensive standard library, which provides a collection of functions and macros that can be used to perform various operations, such as input/output, string manipulation, memory allocation, and mathematical computations.
+        </div>
+        <div class="para">
+            Learning C can be a valuable skill for aspiring programmers, as it provides a solid understanding of fundamental programming concepts and enhances problem-solving abilities. It's a language that emphasizes efficiency and control, making it suitable for various domains and giving developers a strong foundation for learning other programming languages.
+        </div>
+
+        <h2 class="heading" id="struct">Structure of a C program</h2>
+        <div class="para">
+            The structure of a C program consists of various components that work together to define and execute the program. Here's a breakdown of the typical structure of a C program:
+        </div>
+
+        <ol class="para">
+            <li><span class="small-heading">Preprocessor Directives:</span> These are statements that begin with a hash symbol (#) and are processed by the preprocessor before the actual compilation. They are used to include header files, define constants, and perform other preprocessing tasks.</li>
+            <li><span class="small-heading">Header Files:</span> These files contain function prototypes and definitions necessary for the program. They are included using the #include directive at the beginning of the program. Commonly used header files include stdio.h for input/output operations, stdlib.h for memory allocation, math.h for mathematical functions, etc.</li>
+            <li><span class="small-heading">Global Declarations:</span> This section is used to declare global variables and define constants that can be accessed throughout the program. Global variables have a scope that extends across multiple functions.</li>
+            <li><span class="small-heading">Function Declarations:</span> Function declarations specify the return type, name, and parameters (if any) of the functions used in the program. They provide a way to inform the compiler about the existence of functions before they are defined or used.</li>
+            <li><span class="small-heading">Function:</span> Every C program must have a main function, which serves as the entry point of the program. It is where the program execution begins and ends. The main function may accept command-line arguments (int argc, char* argv[]), although it is not required.</li>
+            <li><span class="small-heading">Statements and Expressions:</span> Inside the main function (or other user-defined functions), you write the actual statements and expressions that perform the desired operations of the program. These can include variable declarations, assignment statements, control flow statements (if-else, switch-case), loops (for, while, do-while), function calls, and other C language constructs.</li>
+            <li><span class="small-heading">User-defined Functions:</span> You can define your own functions in addition to the main function to break down the program's logic into smaller, manageable pieces. These functions can have their own local variables and perform specific tasks within the program. Function definitions typically appear after the main function or in separate files.</li>
+            <li><span class="small-heading">Return Statements:</span> The main function (and other functions if applicable) should end with a return statement, which specifies a value to be returned to the calling function or the operating system. In the main function, a return statement with no value (or return 0;) indicates successful program execution.</li>
+        </ol>
+
+        <h2 class="heading" id="prog-1">Program</h2>
+        <pre><code>
+                <span class="keyword">#include</span> < stdio.h >
+
+                // Global variable declaration
+                <span class="keyword"> int</span> globalVariable = 10;
+                
+                // Function declaration
+                <span class="keyword">int</span> <span class="funct">addNumbers</span>(int a, int b);
+                
+                // Main function
+                <span class="keyword">int</span> <span>main</span>() {
+                    // Local variable declaration
+                    int x, y, sum;
+                    
+                    // Code statements
+                    <span class="keyword">printf</span>("Enter two numbers: ");
+                    <span class="keyword">scanf</span>("%d %d", &x, &y);
+                    
+                    // Function call
+                    sum = <span class="funct">addNumbers</span>(x, y);
+                    
+                    // Output result
+                    <span class="keyword">printf</span>("Sum: %d\n", sum);
+                    
+                    <span class="keyword">return</span> 0;
+                }
+                
+                // Function definition
+                <span class="keyword">int</span> <span class="funct">addNumbers</span>(int a, int b) {
+                    <span class="keyword">return</span> a + b;
+                }
+                                
+            </code>
+        </pre>
+
+        <h2 class="heading" id="datatypes">Data types in C</h2>
+        <div class="para">
+            In C programming, data types are used to define the type and size of data that variables can hold. Here are the commonly used data types in C:
+        </div>
+        <ol class="para">
+            <li><span class="small-heading">Integers</span>
+                <ul type="square" class="items">
+                    <li><span class="small-heading">int:</span> Used to store whole numbers (both positive and negative) within a specified range.</li>
+                    <li><span class="small-heading">short</span>: Similar to int, but typically has a smaller range and requires less memory.</li>
+                    <li><span class="small-heading">long:</span> Similar to int, but typically has a larger range and may require more memory.</li>
+                    <li><span class="small-heading">unsigned int:</span> Used to store only non-negative whole numbers (zero and positive values).</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Floating-point Numbers</span>
+                <ul class="items">
+                    <li><span class="small-heading">float:</span> Used to store single-precision floating-point numbers with decimal places.</li>
+                    <li><span class="small-heading">double:</span> Used to store double-precision floating-point numbers, providing higher precision than float.</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Characters</span>
+                <ul class="items">
+                    <li><span class="small-heading">char:</span> Used to store individual characters or small integers. It can represent ASCII characters and other character sets.</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Arrays</span>
+                <ul class="items">
+                    <li><span class="small-heading">int[], float[], char[], etc.:</span> Used to store the memory address of another variable. Pointers allow for dynamic memory allocation and efficient manipulation of memory.</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Structures</span>
+                <ul class="items">
+                    <li><span class="small-heading">struct:</span> sed to define a custom data type that can hold multiple variables of different data types grouped together.</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Enumerations</span>
+                <ul class="items">
+                    <li><span class="small-heading">enum:</span> Used to define a set of named constant values.</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Void</span>
+                <ul class="items">
+                    <li><span class="small-heading">Void:</span> Used to indicate the absence of a value or when a function does not return any value.</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Derived Types</span>
+                <ul class="items">
+                    <li>
+                        <span class="small-heading">Arrays:</span> Used to store a collection of multiple values of the same data type in contiguous memory locations.
+                    </li>
+                    <li>
+                        <span class="small-heading">Pointers:</span> Used to store memory addresses of variables or functions.
+                    </li>
+                    <li>
+                        <span class="small-heading">Structures:</span> Used to define a custom data type that can hold multiple variables of different data types grouped together.
+                    </li>
+                    <li>
+                        <span class="small-heading">Unions:</span> Similar to structures, but different variables within a union share the same memory space.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+        <div class="para">
+            It's important to note that C is a statically-typed language, which means that variables must be declared with their specific data types before they can be used. Different data types have different ranges and memory requirements, so it's essential to choose the appropriate data type based on the requirements of your program to ensure efficient memory usage and accurate representation of data.
+        </div>
+        <div class="para">
+            Additionally, C allows for user-defined data types through structures and enumerations, which can help in organizing and manipulating complex data structures.
+        </div>
+
+        <h2 class="heading" id="variableconstant">Variables and Constants</h2>
+        <div class="para">
+            In C programming, variables and constants are used to store and represent data. They play a crucial role in storing values that can be manipulated and utilized within a program. Here's an explanation of variables and constants in C
+        </div>
+        <ol class="para">
+            <li>
+                <span class="small-heading">Variables</span> 
+                <ul class="items">
+                    <li class="items">Variables are named memory locations that can hold values of a specific data type.</li>
+                    <li class="items">They allow programmers to store and manipulate data during program execution.
+                    </li>
+                    <li class="items">To use a variable, it must be declared before it is used, specifying its data type and optionally assigning an initial value.
+                    </li>
+                    <li class="items">Variables can have different scopes, such as local variables within a function or global variables accessible throughout the program.
+                    </li>
+                    <li class="items">The value of a variable can be changed during program execution by assigning new values to it.
+                    </li>
+                </ul>
+                <h2 class="heading">Program</h2>
+                <pre><code>
+        #include <stdio.h>
+        int main() {
+            // Variable declaration
+            int num1;
+            int num2 = 5; // Variable declaration with initialization
+        
+            // Variable assignment
+            num1 = 10;
+        
+            // Variable usage
+            int sum = num1 + num2;
+            printf("Sum: %d\n", sum);
+        
+            return 0;
+        }
+                </code></pre>
+            </li>
+            <li>
+                <span class="small-heading">Constants</span>
+                <ul class="items">
+                    <li>Constants are fixed values that cannot be changed during program execution.</li>
+                    <li>They are used to represent values that remain constant throughout the program.</li>
+                    <li>Constants can be of different data types, such as integer constants, floating-point constants, character constants, or string constants.</li>
+                    <li>In C, constants are typically defined using the const keyword or by using preprocessor directives such as #define.</li>
+                    <li>Constants provide meaningful names to values that are used repeatedly in the program, enhancing code readability and maintainability.</li>
+                </ul>
+                <h2 class="heading">Program</h2>
+                <pre><code>
+        #include <stdio.h>
+        #define PI 3.14159    // Preprocessor directive to define constant
+        const int MAX_VALUE = 100;   // Declaration of constant variable using 'const'
+        
+        int main() {
+            // Usage of constants
+            float radius = 5.0;
+            float circumference = 2 * PI * radius;
+            printf("Circumference: %f\n", circumference);
+        
+            int array[MAX_VALUE];
+            // ...
+        
+            return 0;
+        }
+                </code></pre>
+            </li>
+        </ol>
+
+        <h2 class="heading" id="operator">Operators</h2>
+        <div class="para">
+            In C programming, operators are symbols or keywords that perform operations on one or more operands (variables, constants, or expressions) and produce a result. They allow for arithmetic computations, logical evaluations, assignment of values, and more. Here are the different types of operators in C:
+        </div>
+        <ol class="para">
+            <li>
+                <span class="small-heading">Arithmetic Operators:</span> 
+                <ul class="items">
+                    <li>
+                        <span class="small-heading">+: </span>(Addition): Adds two operands.
+                    </li>
+                    <li>
+                        <span class="small-heading">-: </span> (Subtraction): Subtracts the second operand from the first.
+                    </li>
+                    <li>
+                        <span class="small-heading">*: </span> (Multiplication): Multiplies two operands.
+                    </li>
+                    <li>
+                        <span class="small-heading">/: </span> (Division): Divides the first operand by the second.
+                    </li>
+                    <li>
+                        <span class="small-heading">%: </span> (Modulus): Returns the remainder of the division operation.
+                    </li>
+                    <li>
+                        <span class="small-heading">++: </span> (Increment): Increments the value of the operand by 1.
+                    </li>
+                    <li>
+                        <span class="small-heading">--: </span> (Decrement): Decrements the value of the operand by 1.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Relational Operators</span>
+                <ul class="items">
+                    <li>
+                        <span class="small-heading">==: </span> (Equal to): Checks if two operands are equal.
+                    </li>                    
+                    <li>
+                        <span class="small-heading">!=: </span> (Not equal to): Checks if two operands are not equal.
+                    </li>                    
+                    <li>
+                        <span class="small-heading"><: </span> (Less than): Checks if the first operand is less than the second.
+                    </li>                    
+                    <li>
+                        <span class="small-heading">>: </span> (Greater than): Checks if the first operand is greater than the second.
+                    </li>                    
+                    <li>
+                        <span class="small-heading"><=: </span> (Less than or equal to): Checks if the first operand is less than or equal to the second.
+                    </li>                    
+                    <li>
+                        <span class="small-heading">>=: </span> (Greater than or equal to): Checks if the first operand is greater than or equal to the second.
+                    </li>                    
+                </ul>
+            </li>
+            <li>
+                <spam class="small-heading">Logical Operators</spam>
+                <ul class="items">
+                    <li>
+                        <span class="small-heading">&&: </span>(Logical AND): Returns true if both operands are true.
+                    </li>
+                    <li>
+                        <span class="small-heading">||: </span> (Logical OR): Returns true if at least one of the operands is true.
+                    </li>
+                    <li>
+                        <span class="small-heading">!: </span> (Logical NOT): Negates the value of the operand.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Assignment Operators</span>
+                <ul class="items">
+                    <li>
+                        <span class="small-heading">= : </span> (Simple Assignment): Assigns the value on the right to the variable on the left.
+                    </li>
+                    <li>
+                        <span class="small-heading">+=, -=, *=, /=, %= : </span>  (Compound Assignment): Performs the respective arithmetic operation and assigns the result to the variable.
+                    </li>
+                    <li>
+                        <span class="small-heading"><<=, >>=, &=, |=, ^= : </span> (Bitwise Assignment): Performs the respective bitwise operation and assigns the result to the variable.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Bitwise Operators</span>
+                <ul class="items">
+                    <li>
+                        <span class="small-heading">&: </span>(Bitwise AND): Performs bitwise AND operation on the binary representation of the operands.
+                    </li>
+                    <li>
+                        <span class="small-heading">|: </span> (Bitwise OR): Performs bitwise OR operation on the binary representation of the operands.
+                    </li>
+                    <li>
+                        <span class="small-heading">^: </span> (Bitwise XOR): Performs bitwise exclusive OR operation on the binary representation of the operands.
+                    </li>
+                    <li>
+                        <span class="small-heading"><<: </span>(Left Shift): Shifts the bits of the first operand to the left by the number of positions specified by the second operand.
+                    </li>
+                    <li>
+                        <span class="small-heading">>>: </span> (Right Shift): Shifts the bits of the first operand to the right by the number of positions specified by the second operand.
+                    </li>
+                    <li>
+                        <span class="small-heading">~: </span>(Bitwise NOT): Flips the bits of the operand.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Conditional Operator</span>
+                <ul class="items">
+                    <li>
+                        <span class="small-heading">?: : </span>(Conditional Operator or Ternary Operator): Evaluates a condition and returns one of two values based on the result of the condition.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 class="heading" id="control">Control Flow</h2>
+        <div class="para">
+            In C programming, control flow refers to the order in which statements and instructions are executed within a program. Control flow allows you to make decisions, loop over code blocks, and control the flow of execution based on certain conditions. Here are the key control flow structures in C
+        </div>
+        <ol class="para">
+            <li>
+                <span class="small-heading" id="conditional">Conditional Statements</span>
+                <ul class="items">
+                    <li>
+                        <span class="small-heading">if statement: </span>Executes a block of code if a given condition is true. It can be followed by an optional else statement for an alternative block of code to execute if the condition is false.
+                        <h2 class="small-heading">Example</h2>
+                        <pre><code>
+        if (condition) {
+            // Code to execute if condition is true
+        } else {
+            // Code to execute if condition is false
+        }
+                        </code></pre>
+                    </li>
+                    <li>
+                        <span class="small-heading">switch statement: </span>Evaluates an expression and performs different actions based on its value. It consists of multiple case labels and an optional default label.
+                        <h2 class="small-heading">Example</h2>
+                        <pre><code>
+        switch (expression) {
+            case value1:
+                // Code to execute if expression matches value1
+                break;
+            case value2:
+                // Code to execute if expression matches value2
+                break;
+            // more case statements
+            default:
+                // Code to execute if no case matches expression
+        }
+                        </code></pre>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading" id="loop">Looping Statements</span>
+                <ul class="items">
+                    <li>
+                        <span class="small-heading">for loop: </span> Repeats a block of code a fixed number of times, using a control variable and an initial condition, an iteration condition, and an update statement.
+                        <h2 class="small-heading">Example</h2>
+                        <pre><code>
+                        for (initialization; condition; update) {
+                            // Code to repeat
+                        }
+                        </code></pre>
+                    </li>
+                    <li>
+                        <span class="small-heading">while loop: </span>Repeats a block of code as long as a given condition is true.
+                        <h2 class="small-heading">Example</h2>
+                        <pre><code>
+                        while (condition) {
+                            // Code to repeat
+                        }
+                        </code></pre>
+                    </li>
+                    <li>
+                        <span class="small-heading">do-while loop: </span> Repeats a block of code at least once, and then continues repeating as long as a given condition is true.
+                        <h2 class="small-heading">Example</h2>
+                        <pre><code>
+                        do {
+                            // Code to repeat
+                        } while (condition);
+                        </code></pre>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2 class="small-heading" id="jump">Jump Statements</h2>
+                <ul class="items">
+                    <li><span class="small-heading">break statement: </span> Terminates the execution of a loop or switch statement, and transfers control to the next statement after the loop or switch block.
+                    </li>
+                    <li><span class="small-heading">continue statement: </span> Skips the remaining code within a loop and proceeds to the next iteration.
+                    </li>
+                    <li><span class="small-heading">goto statement: </span>Transfers control to a labeled statement within the same function.</li>
+                </ul>
+            </li>
+            <li>
+                <h2 class="small-heading">Function Calls</h2>
+                <ul class="items">
+                    <li>Functions allow you to encapsulate a block of code that can be called and executed at different points in the program.</li>
+                    <li>Function calls allow you to transfer control to the function, execute its code, and return back to the calling point.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 class="heading" id="array">Arrays in C</h2>
+        <div class="para">
+            In C programming, an array is a collection of elements of the same data type stored in contiguous memory locations. Arrays provide a convenient way to store and manipulate multiple values under a single variable name. Here's an overview of arrays in C
+        </div>
+        <ol class="para">
+            <li>
+                <span class="small-heading">Declaration and Initialization</span>
+                <ul class="items">
+                    <li>To declare an array, you specify the data type of its elements and the number of elements it can hold. The syntax is as follows:</li>
+                
+                <pre><code>
+        data_type array_name[size];
+            </code></pre>
+            <h2 class="small-heading">Example</h2>
+            <pre><code>
+        int numbers[5];  // Declaration of an integer array with size 5
+            </code></pre>
+                <li>You can also initialize an array at the time of declaration by specifying the values inside braces {}</li>
+                <pre><code>
+        data_type array_name[size] = {value1, value2, ..., valueN};
+                </code></pre>
+                <h2 class="small-heading">Example</h2>
+                <pre><code>
+        int numbers[5] = {1, 2, 3, 4, 5};  // Initialization of an integer array
+                </code></pre>
+                </ul>
+            </li>
+            <li>
+                <spna class="small-heading">Accessing Array Elements</spna>
+                <ul class="items">
+                    <li>Array elements are accessed using zero-based indexing. The first element has an index of 0, the second element has an index of 1, and so on.</li>
+                    <pre><code>
+                    array_name[index]
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+                    int number = numbers[2];  // Accessing the third element of the 'numbers' array
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Modifying Array Elements</span>
+                <ul class="items">
+                    <li>Array elements can be modified by assigning a new value to the desired element using the assignment operator =.</li>
+                    <pre><code>
+                    array_name[index] = new_value;
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+                    numbers[3] = 10;  // Modifying the fourth element of the 'numbers' array
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Array size</span>
+                <ul class="items">
+                    <li>The size of an array is determined at the time of declaration and cannot be changed during program execution.</li>
+                    <li>The number of elements an array can hold is specified in the square brackets [].</li>
+                    <li>The size of an array can be accessed using the sizeof operator.</li>
+                    <pre><code>
+                    sizeof(array_name) / sizeof(array_name[0])
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+                    int size = sizeof(numbers) / sizeof(numbers[0]);  // Calculating the size of the 'numbers' array
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Iterating Over an Array:</span>
+                <ul class="items">
+                    <li>Looping structures such as for or while can be used to iterate over the elements of an array using index values.
+                    </li>
+                    <pre><code>
+                    for (int i = 0; i < array_size; i++) {
+                        // Access and process array elements using 'array_name[i]'
+                    }
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+                    for (int i = 0; i < size; i++) {
+                        printf("%d ", numbers[i]);  // Printing elements of the 'numbers' array
+                    }
+                    </code></pre>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 class="heading" id="funct">Fucntion in C</h2>
+        <div class="para">In C programming, functions are a fundamental building block used to organize and modularize code. A function is a self-contained block of code that performs a specific task and can be called from different parts of a program. Here's an overview of functions in C</div>
+
+        <ol class="para">
+            <li>
+                <span class="small-heading">Function Declaration and Definition</span>
+                <ul class="items">
+                    <li>A function declaration tells the compiler about the function's name, return type, and the types of its parameters (if any).</li>
+                    <pre><code>
+        return_type function_name(parameter_list);
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        int sum(int num1, int num2);  // Function declaration
+                    </code></pre>
+                    <li>A function definition provides the actual implementation of the function. It includes the function header (return type, name, and parameters in parentheses) and a body containing the code to be executed.</li>
+                    <pre><code>
+        return_type function_name(parameter_list) {
+            // Function body (code to be executed)
+        }
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        int sum(int num1, int num2) {  // Function definition
+            int result = num1 + num2;
+            return result;
+        }
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Function Calling</span>
+                <ul class="items">
+                    <li>To use a function, you call it by its name followed by parentheses, passing arguments (if any) that match the parameter list.
+                    </li>
+                    <pre><code>
+                        return_type variable = function_name(argument_list);
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+                        int a = 5, b = 3;
+int result = sum(a, b);  // Function call
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Function Return</span>
+                <ul class="items">
+                    <li>A function can optionally return a value using the return statement. The return type in the function declaration specifies the type of value to be returned. If the return type is void, the function does not return a value.</li>
+                    <pre><code>
+                        return_type function_name(parameter_list) {
+                            // Code
+                            return value;  // Return statement
+                        }
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+                        int sum(int num1, int num2) {
+                            int result = num1 + num2;
+                            return result;  // Return statement
+                        }
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Function Parameters</span>
+                <ul class="items">
+                    <li>Function parameters allow you to pass values from the calling code to the function. Parameters are defined in the function declaration and used in the function definition.</li>
+                    <pre><code>
+                        return_type function_name(parameter_type parameter_name) {
+                            // Code using the parameter
+                        }
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>int square(int num) {
+                        int result = num * num;
+                        return result;
+                    }
+                    </code></pre>
+                    <li>Multiple parameters can be separated by commas in both the function declaration and definition.</li>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Function Prototypes</span>
+                <ul class="items">
+                    <li>A function prototype is a forward declaration of a function. It provides the function's signature (name, return type, and parameter list) without providing its implementation.
+                    </li>
+                    <li>Prototypes are typically placed at the beginning of the program or in header files to allow functions to be called before they are defined.
+                    </li>
+                    <li>Prototypes are optional if the function is defined before it is called in the program.
+                    </li>
+                    <pre><code>
+                        return_type function_name(parameter_list);
+
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+                        int sum(int num1, int num2);  // Function prototype
+                    </code></pre>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 class="heading" id="recursion">Recursion in C</h2>
+        <div class="para">Recursion is a programming technique where a function calls itself to solve a problem by breaking it down into smaller, simpler instances. It is a powerful concept used in various algorithms and data structures.<br>Here are some key points about recursion: </div>
+
+        <ol class="para">
+            <li>
+                <span class="small-heading">Base Case: </span> Recursion involves defining a base case that represents the simplest form of the problem. It acts as the terminating condition for the recursive function and helps prevent infinite recursion.
+            </li>
+            <li><span class="small-heading">Recursive Case:</span> The recursive function calls itself, typically with a modified set of parameters or input, to solve a smaller version of the original problem. The function continues to call itself until it reaches the base case.</li>
+            <li><span class="small-heading">Recursion vs. Iteration:</span> Recursion can often be used as an alternative to iteration (looping). Both approaches can solve the same problems, but recursion tends to be more concise for certain types of algorithms, such as those based on tree traversal or divide-and-conquer.</li>
+            <li><span class="small-heading">Infinite Recursion:</span> Without a proper base case or termination condition, recursion can lead to infinite recursion, causing the program to run indefinitely and potentially resulting in a stack overflow error.</li>
+
+            <h2 class="small-heading">Example</h2>
+            <pre><code>
+        #include <stdio.h>
+
+        // Recursive function to calculate the factorial of a number
+        unsigned int factorial(unsigned int n)
+        {
+            // Base case: factorial of 0 is 1
+            if (n == 0) {
+                return 1;
+            }
+            // Recursive case: calculate factorial using recursion
+            else {
+                return n * factorial(n - 1);
+            }
+        }
+        
+        int main()
+        {
+            unsigned int num = 5;
+            unsigned int result = factorial(num);
+            
+            printf("Factorial of %u is %u\n", num, result);
+            
+            return 0;
+        }
+                </code></pre>
+        </ol>
+
+        <h2 class="heading" id="pointer">Pointer in C</h2>
+        <div class="para">Pointers are a powerful feature in C programming that allow you to directly manipulate memory addresses and access data indirectly. They provide flexibility and efficiency in memory management and are widely used in various programming tasks. Here's an overview of pointers in C:
+        </div>
+
+        <ol class="para">
+            <li>
+                <span class="small-heading">Pointer Declaration and Initialization</span>
+                <ul class="items">
+                    <li>A pointer is a variable that stores the memory address of another variable. It is declared by using the * symbol in the declaration.
+                    </li>
+                    <pre><code>
+        data_type *pointer_name;
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        int *ptr;  // Declaration of an integer pointer
+
+                    </code></pre>
+                    <li>Pointers can be initialized with the address of a variable using the address-of operator &.</li>
+                    <pre><code>
+        pointer_name = &variable_name;
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        int number = 10;
+        int *ptr = &number;  // Initialization of the pointer with the address of 'num'
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Pointer Dereferencing:
+                </span>
+                <ul class="items">
+                    <li>Dereferencing a pointer allows you to access the value stored at the memory address it points to. It is done using the dereference operator *.
+                    </li>
+                    <pre><code>
+        *pointer_name;
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        int value = *ptr;  // Dereferencing the pointer to access the value it points to
+                    </code></pre>
+
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Pointer Arithmetic</span>
+                <ul class="items">
+                    <li>Pointers can be manipulated using arithmetic operations. Adding an integer to a pointer advances it by the specified number of elements, based on the size of the data type it points to.
+                    </li>
+                    <pre><code>
+        pointer_name = pointer_name + value;
+                    </code></pre>
+
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        int *ptr = /* some address */;
+        ptr = ptr + 1;  // Advances the pointer by one integer size
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Null Pointer</span>
+                <ul class="items">
+                    <li>A null pointer is a pointer that does not point to any valid memory address. It is typically used to indicate the absence of a meaningful value.
+                    </li>
+                    <pre><code>
+        data_type *pointer_name = NULL;
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        int *ptr = NULL;  // Declaration and initialization of a null pointer
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Pointer to Pointer</span>
+                <ul class="items">
+                    <li>Pointers can also have their own pointers. These are called "pointers to pointers" or "double pointers." They are useful in situations where you need to modify the pointer itself.
+                    </li>
+                    <pre><code>
+        data_type **pointer_name;
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        int **ptr = /* some address */;  // Declaration of a double pointer
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Passing Pointers to Functions</span>
+                <ul class="items">
+                    <li>Pointers can be passed as function arguments, allowing functions to modify the original variables or access their values indirectly.
+                    </li>
+                    <pre><code>
+        void function_name(data_type *pointer_name) {
+            // Function body
+        }
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        void swap(int *a, int *b) {
+            int temp = *a;
+            *a = *b;
+            *b = temp;
+        }
+                    </code></pre>
+                </ul>
+            </li>
+        </ol>
+        <div class="para">Pointers in C are an essential concept for dynamic memory allocation, array manipulation, and accessing data structures. They provide low-level control over memory and enable efficient memory management and data manipulation. </div>
+
+        <h2 class="heading" id="string">Strings in C</h2>
+        <div class="para">In C programming, strings are sequences of characters terminated by a null character ('\0'). Strings are represented as arrays of characters and are commonly used to store and manipulate textual data. Here's an overview of strings in C</div>
+
+        <ol class="para">
+            <li>
+                <span class="small-heading">String Declaration and Initialization</span>
+                <ul class="items">
+                    <li>Strings in C are represented as character arrays. You can declare and initialize a string using the following syntax</li>
+                    <pre><code>
+        char string_name[size];
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        char greeting[20];  // Declaration of a string with a size of 20 characters
+                    </code></pre>
+                    <li>Strings can also be initialized with a specific value at the time of declaration using double quotes (""):</li>
+                    <pre><code>
+        char string_name[] = "initial_value";
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        char name[] = "John";  // Initialization of a string with the value "John"
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">String Input</span>
+                <ul class="items">
+                    <li>You can read a string from the user using the scanf function with the %s format specifier:
+                    </li>
+                    <pre><code>
+        scanf("%s", string_name);
+                    </code></pre>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        char city[50];
+        scanf("%s", city);  // Reads a string input from the user and stores it in 'city'
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">String Output</span>
+                <ul class="items">
+                    <li>You can display a string using the printf function with the %s format specifier:
+                    </li>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        char message[] = "Hello, World!";
+        printf("%s", message);  // Displays the string "Hello, World!"
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading" id="stringfunct">String Functions</span>
+                <ul class="items">
+                    <li>C provides a set of string functions in the <string.h> header that can be used to perform various operations on strings. Some commonly used string functions include:
+                        <ul>
+                            <li>strlen: Calculates the length of a string.
+                            </li>
+                            <li>strcpy: Copies one string to another.
+                            </li>
+                            <li>strcat: Concatenates two strings.
+                            </li>
+                            <li>strcmp: Compares two strings.
+                            </li>
+                            <li>strstr: Searches for a substring within a string.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">String Manipulation</span>
+                <ul class="items">
+                    <li>Since strings are represented as character arrays, you can access and modify individual characters within a string using array indexing.</li>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+                        char name[] = "John";
+name[1] = 'a';  // Modifies the second character of the string to 'a'
+                    </code></pre>
+                    <li>You can also use string functions like strcpy, strcat, and sprintf to manipulate strings and perform operations such as copying, concatenating, and formatting.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">String Comparison</span>
+                <ul class="items">
+                    <li>
+                        String comparison in C is done using the strcmp function, which returns an integer value indicating the result of the comparison.
+                        <ul class="items">
+                            <li>If the result is 0, the strings are equal.
+                            </li>
+                            <li>If the result is negative, the first string is lexicographically smaller than the second.
+                            </li>
+                            <li>If the result is positive, the first string is lexicographically larger than the second.
+                            </li>
+                        </ul>
+                    </li>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+    char str1[] = "apple";
+    char str2[] = "banana";
+    int result = strcmp(str1, str2);  // Compares str1 and str2 lexicographically
+                    </code></pre>
+                </ul>
+            </li>
+        </ol>
+
+
+        <h2 class="heading" id="struct">Structure in C</h2>
+        <div class="para">In C programming, structures (also known as structs) allow you to group together multiple variables of different data types into a single unit. Structures provide a way to create user-defined data types that can hold related information. Here's an overview of structures in C:
+        </div>
+        <ol class="para">
+            <li>
+                <span class="small-heading">Structure Declaration</span>
+                <ul class="items">
+                    <li>To declare a structure, you define its name and list the member variables inside curly braces {}. Each member variable has a data type and a name.
+                    </li>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        struct Person {
+            char name[50];
+            int age;
+            float height;
+        };
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Structure Initialization:
+                </span>
+                <ul class="items">
+                    <li>You can initialize a structure at the time of declaration by providing values for its member variables inside curly braces {}.
+                    </li>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        struct Person person1 = {"John", 25, 1.75};
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Accessing Structure Members:
+                </span>
+                <ul class="items">
+                    <li>Structure members are accessed using the dot (.) operator, which connects the structure variable and the member name.
+                    </li>
+
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        printf("Name: %s\n", person1.name);    // Accessing the 'name' member of 'person1'
+        printf("Age: %d\n", person1.age);      // Accessing the 'age' member of 'person1'
+        printf("Height: %.2f\n", person1.height);  // Accessing the 'height' member of 'person1'
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Nested Structures:
+                </span>
+                <ul class="items">
+                    <li>Structures can be nested inside other structures, allowing you to create more complex data structures.
+                    </li>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        struct Address {
+        char street[50];
+        char city[50];
+        int zip_code;
+        };
+                    
+        struct Person {
+            char name[50];
+            int age;
+            struct Address address;
+        };
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Passing Structures to Functions:
+                </span>
+                <ul class="items">
+                    <li>You can pass structures to functions as arguments. This can be done by passing the structure variable itself or by passing a pointer to the structure.
+                    </li>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        void printPerson(struct Person p);
+        // or
+        void printPerson(struct Person *p);
+                    </code></pre>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 class="heading" id="file">File Input/Output</h2>
+        <div class="para">File input/output (I/O) operations in C allow you to read data from files and write data to files. These operations involve opening files, reading or writing data, and closing files. Here's an overview of file I/O in C:
+        </div>
+
+        <ol class="para">
+            <li>
+                <span class="small-heading" id="filefunct">File Handling Functions:
+                </span>
+                <ul class="items">
+                    <li>The <stdio.h> header file in C provides functions for file I/O operations. Some commonly used functions include:
+                    </li>
+                    <ul class="items">
+                        <li>fopen: Opens a file and returns a file pointer.
+                        </li>
+                        <li>fclose: Closes a file.
+                        </li>
+                        <li>fprintf: Writes formatted data to a file.
+                        </li>
+                        <li>fscanf: Reads formatted data from a file.
+                        </li>
+                        <li>fgetc/getc: Reads a character from a file.
+                        </li>
+                        <li>fputc/putc: Writes a character to a file.
+                        </li>
+                        <li>fgets: Reads a line from a file.
+                        </li>
+                        <li>fputs: Writes a line to a file.
+                        </li>
+                        <li>feof: Checks if the end of the file has been reached.
+                        </li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Opening a File:
+                </span>
+                <ul class="items">
+                    <li>To open a file for reading or writing, you use the fopen function, which returns a file pointer.
+                    </li>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        FILE *file_pointer = fopen("file_name", "mode");
+                    </code></pre>
+                    <div class="para">Here, "file_name" is the name of the file to open, and "mode" specifies the mode of file access, such as "r" for reading, "w" for writing (overwriting existing contents), or "a" for appending (adding to the end of the file).</div>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Closing a File:
+                </span>
+                <ul class="items">
+                    <li>
+                        After you finish reading or writing to a file, you should close it using the fclose function to release system resources.
+                    </li>
+                    <pre><code>
+        fclose(file_pointer);
+                    </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Reading from a File:
+                </span>
+                <ul class="items">
+                    <li>You can read data from a file using functions like fscanf, fgetc, or fgets. These functions allow you to read characters, strings, or formatted data from a file into variables.
+                    </li>
+                    <pre><code>
+        fscanf(file_pointer, format_specifier, variable_list);
+        // or
+        char ch = fgetc(file_pointer);
+        // or
+        char line[100];
+        fgets(line, sizeof(line), file_pointer);
+                        </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">Writing to a File:
+                </span>
+                <ul class="items">
+                    <li>To write data to a file, you can use functions like fprintf, fputc, or fputs. These functions allow you to write characters, strings, or formatted data to a file.
+                    </li>
+                    <pre><code>
+        fprintf(file_pointer, format_specifier, variable_list);
+        // or
+        fputc(character, file_pointer);
+        // or
+        fputs(string, file_pointer);
+                        </code></pre>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">
+                    Error Handling:
+                </span>
+                <ul class="items">
+                    <li>It's important to check for errors during file I/O operations. Functions like fopen and fprintf return a NULL value if an error occurs. You can use this to handle errors and perform appropriate error handling.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">File Position:
+                </span>
+                <ul class="items">
+                    <li>The file position indicates the current location in the file where the next I/O operation will occur. Functions like fseek and ftell allow you to control and retrieve the file position.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading" id="filemodes">File Modes:
+                </span>
+                <ul class="items">
+                    <li>The mode argument in the fopen function specifies the file access mode. Common modes include:
+                    </li>
+                    <ul class="items">
+                        <li>"r": Read mode.
+                        </li>
+                        <li>"w": Write mode (overwrites existing file or creates a new file).
+                        </li>
+                        <li>"a": Append mode (adds data to the end of the file).
+                        </li>
+                        <li>"rb", "wb", "ab": Binary mode for reading, writing, and appending.
+                        </li>
+                    </ul>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 class="heading" id="preprocessor">Preprocessor Directives</h2>
+        <div class="para">Preprocessor directives in C are special instructions that are processed by the preprocessor before the compilation of the code. They provide a way to modify the source code or control the compilation process. Here's an overview of some commonly used preprocessor directives in C:
+        </div>
+
+        <ol class="para">
+            <li>
+                <span class="small-heading">#include:
+                </span>
+                <ul class="items">
+                    <li>The #include directive is used to include header files in your code.
+                    </li>
+                    <li>It allows you to reuse code from other files or libraries.
+                    </li>
+                    <li>Example: #include <stdio.h> includes the standard input/output header file.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="small-heading">#define:
+                </span>
+                <ul class="items">
+                    <li>The #define directive is used to define constant values or macros.
+                    </li>
+                    <li>It provides a way to assign a name to a constant or to create a code snippet that is replaced during preprocessing.
+                    </li>
+                    <li>Example: #define PI 3.14159 defines a constant named "PI" with the value 3.14159.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 class="heading" id="advance">Some Advanced Topic</h2>
+        <ol class="para">
+            <li><span class="small-heading">Bitwise Operations in C</span>
+            <div class="para">Bitwise operations in C allow you to manipulate individual bits of integer values. They operate on the binary representation of the values, performing logical and arithmetic operations at the bit level. Here are the commonly used bitwise operators in C:
+            </div>
+            <ol class="para" type="I">
+                <li>
+                <span class="small-heading">Bitwise AND (&):
+                </span>
+                <ul class="items">
+                    <li>Performs a bitwise AND operation between the corresponding bits of two operands.
+                    </li>
+                    <li>The result is 1 only if both bits are 1; otherwise, the result is 0.
+                    </li>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        unsigned int a = 5;  // binary: 0101
+        unsigned int b = 3;  // binary: 0011
+        unsigned int result = a & b;  // binary: 0001 (decimal: 1)
+                        </code></pre>
+                </ul>
+                </li>
+                <li>
+                <span class="small-heading">Bitwise OR (|):
+                </span>
+                <ul class="items">
+                    <li>Performs a bitwise OR operation between the corresponding bits of two operands.
+                    </li>
+                    <li>The result is 1 if at least one of the bits is 1; otherwise, the result is 0.
+                    </li>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        unsigned int a = 5;  // binary: 0101
+        unsigned int b = 3;  // binary: 0011
+        unsigned int result = a | b;  // binary: 0111 (decimal: 7)
+                        </code></pre>
+                </ul>
+                </li>
+                <li>
+                <span class="small-heading">Bitwise XOR (^):
+                </span>
+                <ul class="items">
+                    <li>Performs a bitwise exclusive OR (XOR) operation between the corresponding bits of two operands.
+                    </li>
+                    <li>The result is 1 if the two bits being XORed are different; otherwise, the result is 0.
+                    </li>
+                    <h2 class="small-heading">Example</h2>
+                    <pre><code>
+        unsigned int a = 5;  // binary: 0101
+        unsigned int b = 3;  // binary: 0011
+        unsigned int result = a ^ b;  // binary: 0110 (decimal: 6)
+                        </code></pre>
+                </ul>
+                </li>
+                <li>
+                    <span class="small-heading">Bitwise NOT (~):
+                    </span>
+                    <ul class="items">
+                        <li>Performs a bitwise complement operation, flipping each bit of the operand.
+                        </li>
+                        <li>The result is the binary complement of the operand.
+                        </li>
+                        <h2 class="small-heading">Example</h2>
+                        <pre><code>
+        unsigned int a = 5;  // binary: 0101
+        unsigned int result = ~a;  // binary: 1010 (decimal: -6 due to two's complement representation)
+                            </code></pre>
+                    </ul>
+                </li>
+                <li>
+                    <span class="small-heading">Left Shift (<<):
+                    </span>
+                    <ul class="items">
+                        <li>Shifts the bits of the left operand to the right by the number of positions specified by the right operand.
+                        </li>
+                        <li>Zero bits are shifted in from the right, and the leftmost bits are discarded.
+
+                        <h2 class="small-heading">Example</h2>
+                        <pre><code>
+        unsigned int a = 5;  // binary: 0101
+        unsigned int result = a << 2;  // binary: 10100 (decimal: 20)
+                            </code></pre>
+                    </ul>
+                </li>
+                <li>
+                    <span class="small-heading">Right Shift (>>):
+                    </span>
+                    <ul class="items">
+                        <li>Shifts the bits of the left operand to the right by the number of positions specified by the right operand.
+                        </li>
+                        <li>For unsigned values, zero bits are shifted in from the left.
+                        </li>
+                        <li>For signed values, the sign bit is shifted in from the left, preserving the sign of the value.
+                        </li>
+                        <h2 class="small-heading">Example</h2>
+                        <pre><code>
+        unsigned int a = 20;  // binary: 10100
+        unsigned int result = a >> 2;  // binary: 00101 (decimal: 5)
+                            </code></pre>
+                    </ul>
+                </li>
+            </ol>
+            </li>
+            <li>
+                <span class="small-heading">Dynamic Memory Allocation in C</span>
+                <div class="para">Dynamic memory allocation in C allows you to allocate and deallocate memory dynamically at runtime. It provides flexibility in managing memory resources and is commonly used when the size of memory needed is not known at compile-time or when you want to manage memory efficiently. Here's an overview of dynamic memory allocation in C using the functions malloc, calloc, realloc, and free:
+                </div>
+
+                <ol class="para" type="I">
+                    <li><span class="small-heading">malloc - Allocating Memory: </span>
+                        <ul class="items">
+                            <li>The malloc function is used to dynamically allocate a block of memory from the heap.
+                            </li>
+                            <li>It takes the number of bytes to allocate as an argument and returns a pointer to the allocated memory block.
+                            </li>
+                            <li>Syntax: void* malloc(size_t size);
+                                Syntax: void* malloc(size_t size);
+                            </li>
+                            <h2 class="small-heading">Example</h2>
+                            <pre><code>
+        int* numbers = (int*)malloc(5 * sizeof(int));
+        if (numbers == NULL) {
+            // Handle memory allocation failure
+        }
+                                </code></pre>
+                        </ul>
+                    </li>
+                    <li><span class="small-heading">calloc - Allocating and Initializing Memory: </span>
+                        <ul class="items">
+                            <li>The calloc function is used to dynamically allocate a block of memory and initialize it to zero.
+                            </li>
+                            <li>It takes the number of elements and the size of each element as arguments and returns a pointer to the allocated memory block.
+                            </li>
+                            <li>Syntax: void* calloc(size_t num, size_t size);
+                            </li>
+                            <h2 class="small-heading">Example</h2>
+                            <pre><code>
+        int* numbers = (int*)calloc(5, sizeof(int));
+        if (numbers == NULL) {
+            // Handle memory allocation failure
+        }
+                                </code></pre>
+                        </ul>
+                    </li>
+                    <li><span class="small-heading">realloc - Resizing Allocated Memory: </span>
+                        <ul class="items">
+                            <li>The realloc function is used to resize an existing dynamically allocated memory block.
+                            </li>
+                            <li>It takes a pointer to the previously allocated memory block, the new size in bytes, and returns a pointer to the resized memory block.
+                            </li>
+                            <li>Syntax: void* realloc(void* ptr, size_t size);
+                            </li>
+                            <h2 class="small-heading">Example</h2>
+                            <pre><code>
+        int* resizedNumbers = (int*)realloc(numbers, 10 * sizeof(int));
+        if (resizedNumbers == NULL) {
+            // Handle memory allocation failure or consider the original block still valid
+        }
+                                </code></pre>
+                        </ul>
+                    </li>
+                    <li><span class="small-heading">free - Deallocating Memory: </span> 
+                        <ul class="items">
+                            <li>The free function is used to deallocate a dynamically allocated memory block, returning the memory back to the system.
+                            </li>
+                            <li>It takes a pointer to the previously allocated memory block as an argument.
+                            </li>
+                            <li>Syntax: void free(void* ptr);
+                            </li>
+                            <h2 class="small-heading">Example</h2>
+                            <pre><code>
+        free(numbers);
+                            </code></pre>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+
+        </ol>
+
+
+
+    </section>
+
+    <footer>
+        <div class="foot">
+            <div>&copy; Copyright 2023 | www.codemaster.com | All rights reserved | Developed By <span>Azaad Mottan</span></div>
+        </div>
+    </footer>
+
+
+
+     <script src="02_web.js"></script>
+</body>
+</html>

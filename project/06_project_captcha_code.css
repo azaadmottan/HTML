@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(130deg, #a61ef5, #0917e7);
+}
+
+.container {
+    position: relative;
+    width: 450px;
+    max-width: 350px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.8);            /* box-shadow: X-axis Y-axis blur rgba(); */
+}
+
+header {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.input_field {
+    margin-top: 25px;
+    width: 100%;
+    position: relative;
+} 
+
+.captcha_box input {
+    color: rgb(29, 27, 27);
+}
+
+/* .captcha_input input {
+    letter-spacing: 2cap;
+} */
+
+.msg {
+    /* color: rgb(13, 212, 6); */
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 5px;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+input, button {
+    padding: 4px 10px;
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+input {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.refresh {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    right: 10px ;
+    transform: translateY(-50%);
+    color: white;
+    background: #303efa;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.refresh:active {
+    transform: translateY(-50%) scale(0.94);
+}
+
+input:focus {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+button {
+    margin-top: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    background-color: #303efa;
+    user-select: none;
+}
+/* 
+button:hover {
+    background-color: rgb(69, 111, 250);
+} */
+
+button:active {
+    transform: scale(0.99);
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}

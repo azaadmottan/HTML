@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net banking</title>
+    <link rel="shortcut icon" href="/HTML/01 Images/phonepe-logo.png">
+    <link rel="stylesheet" href="02_pract.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <h1>NET BANKING</h1>
+    <form method="get" action="backend.php">             <!--input controls e.g. textfield, textarea, radiobutton, button--> 
+        <div class="box">
+            <!-- <h3><i>CONTACT INFORMATION</i></h3> -->
+            <fieldset>
+            <legend>Contact Information</legend>
+            <div>
+                <label class="name" for="name">Name<sup>*</sup>:</label><br>
+                <input type="text" name="uname" placeholder="Enter Name" id="name" autocomplete="off" required>
+            </div>
+            <!-- <br> -->
+
+            <div>
+                <label for="number">Phone Number<sup>*</sup>:</label><br>
+                <input type="text" name="number" placeholder="Phone number" maxlength="10" id="number" autocomplete="off" required>
+            </div>
+            <!-- <br> -->
+
+            <div>
+                <label for="mail">Email<sup>*</sup>:</label><br>
+                <input type="email" name="mail" placeholder="Email" id="mail" autocomplete="off" required>
+            </div>
+            <!-- <br> -->
+
+            <div>
+                <label for="address">Address</label><br>
+                <textarea class="address" name="address" id="address" cols="96" rows="1" placeholder="Address"></textarea>
+            </div>
+            <!-- <br> -->
+
+            <div>
+                <label for="pincode">Pincode:</label><br> 
+                <input type="number" name="pincode" id="pincode" placeholder="Pincode" maxlength="10">
+            </div>
+            </fieldset>
+            <br>
+
+
+            <!-- <h3><i>PAYMENT INFORMATION</i></h3> -->
+            <fieldset>
+            <legend>Payment Information</legend>
+            <div>
+                <label for="card_type">Card Type<sup>*</sup>:</label><br>
+                <select name="card_type" class="card" id="card_type" required>
+                    <option value="">--Select Card Type--</option>
+                    <option value="visa">Visa</option>
+                    <option value="rupay">Rupay</option>
+                    <option value="mastercard">Mastercard</option>
+                </select>
+            </div>
+            <!-- <br> -->
+
+            <div>
+                <label for="card_number">Card Number<sup>*</sup>:</label><br>
+                <input type="number" name="card_number" id="card_number"placeholder="Card Number" required>
+            </div>
+            <!-- <br> -->
+
+            <div>
+                <label for="cvv">CVV Number<sup>*</sup>:</label><br>
+                <input type="password" name="cvv" id="cvv" placeholder="cvv" required>
+            </div>
+            <!-- <br> -->
+
+            <div>
+                <label for="card_name">Card Holder Name<sup>*</sup>:</label><br>
+                <input type="text" name="card_name" placeholder="Card holder name" id="card_name" required>
+            </div>
+            <!-- <br> -->
+
+            <div>
+                <label for="exp_date">Expiration Date<sup>*</sup>:</label><br>
+                <input type="date" name="exp_date" id="exp_date" placeholder="Exp date" required>
+            </div>
+            <!-- <br> -->
+
+            <div>
+                <label for="reg_number">Contact Number<sup>*</sup>:</label><br>
+                <input type="number" name="reg_number" id="reg_number" placeholder="Ph.number" max-length="10" required>
+            </div>
+            <!-- <br> -->
+
+            <div class="register">
+                Phone Number Is Registered<sup>*</sup>:
+                Yes<input type="radio" name="registered" id="registered" required>No<input type="radio" name="registered" id="registered" required>
+            </div>
+            <!-- <br> -->
+
+
+            <div class="check">
+                Are You Sure For Payment<sup>*</sup>:<input type="checkbox" name="surity" id="surity" required>
+            </div>
+            </fieldset>
+            <hr>
+            <div class="btn">
+                <input class="button" type="submit" value="Pay Now" id="submission"><br>
+                <input class="button" type="reset" value="Cancel" id="cancel">
+            </div>
+        </div>
+    </form>   
+</body>
+<!-- <script>
+    let obj = document.querySelector("#submission");
+
+    console.log(obj);
+    obj.addEventListener("click", function() {
+        
+        location.reload();
+    })
+</script> -->
+</html>

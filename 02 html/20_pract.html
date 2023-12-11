@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String in javascript</title>
+</head>
+<body>
+    <h1>STRING IN JAVASCRIPT</h1>
+    <div id="content"></div>
+    <script>
+        var str = "This is our first string program in javascript \n";
+        var str1 = "javascript program";
+        var str2 = `This is second "${str1}"`;
+        var len = "The length of string is "+str1.length;
+        console.log(str);
+        console.log(str1);
+        console.log(str2);
+        console.log(len);
+        var position = str1.indexOf("program");
+        var position1 = str.lastIndexOf("is");
+        console.log(position);
+        console.log(position1);
+        var sub = str.slice(5,7);
+        console.log(sub);
+        document.getElementById('content').innerHTML= "Here we use document.getElementById for write in the html page"
+    </script>
+</body>
+</html>

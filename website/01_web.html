@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Code Master</title>
+    <link rel="shortcut icon" href="../01 Images/fav-5.png" type="image/x-icon">
+    <link rel="stylesheet" href="01_web.css" />
+</head>
+
+<body>
+    <header id="header" class="header head-resp">
+        <figure>
+            <a href="01_web.html"><h2>code<span>Master</span></h2>
+            </a>
+        </figure>
+        <nav id="nav">
+            <ul id="navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#domain">Doamin & Application of Technology</a></li>
+                <li><a href="#course">Course</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <!-- <a href="#"><input type="button" class="login" value="Login"></a> -->
+                <!-- <button class="dashboard"><a href="#">Dashboard</a></button>
+                <button class="login"><a href="#">Login</a></button> -->
+            </ul>
+        </nav>
+        <div class="burger" id="burger" onclick="showNav()">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+        <div class="cross" id="cross" onclick="showNav()">&#9587</div>
+    </header>
+    <!-- <div class="canvas" onclick="showNav()">&#9776;</div> -->
+    
+
+    <button onclick="topFunction()" id="topBtn">&#8679; Top</button>
+
+    <section class="main" id="home">
+        <div class="column">
+            <h1>Elevating <span>coding skills</span>,<br>fueling innovation <span>globally</span>.</h1>
+            <!-- <div class="txt-wrapper">
+                <h1 class="static-txt">I'm a </h1>
+                <br>
+                <ul class="dynamic-txt">
+                    <li><span>Programmer</span></li>
+                    <li><span>Software Developer</span></li>
+                    <li><span>Designer</span></li>
+                    <li><span>Freelancer</span></li>
+                    <li><span>Gamer</span></li>
+                </ul>
+
+            </div> -->
+            <div class="txt-wrapper">
+                <h1 class="static-txt">Vision of <span>Code Master</span></h1>
+                <p>
+                    <span class="typed-text"></span>
+                    <span class="cursor">&nbsp;</span>
+                </p>
+            </div>
+        </div>
+        <div class="image column">
+            <img src="../01 Images/mac_speaker.jpg" alt="Image" width="125px">
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="about" id="about">
+        <h2 class="heading">About Us</h2>
+        Code Master is a platform dedicated to empowering individuals in their coding journey. With a mission to unlock the potential of aspiring programmers, Code Master provides a comprehensive range of resources, tutorials, and interactive learning experiences. From beginners taking their first steps into the world of coding to seasoned developers honing their skills, Code Master offers a supportive and immersive environment. With a focus on practical application and hands-on projects, learners can explore various programming languages and frameworks. Through engaging exercises and challenges, Code Master nurtures problem-solving abilities, critical thinking, and creativity. Join the Code Master community today and embark on a transformative coding adventure, where the possibilities are limitless.
+    </section>
+
+    <hr>
+
+    <section class="domain" id="domain">
+        <h2 class="heading">Domain & Application Of Technology</h2>
+        <div class="para para-1">
+            Code Master is a comprehensive platform designed for individuals passionate about coding. With the domain name "codemaster.com," it serves as a hub for aspiring programmers, experienced developers, and coding enthusiasts alike. The website offers a plethora of resources, including tutorials, articles, and coding exercises, covering a wide range of programming languages and technologies. From web development to data science, mobile app development to artificial intelligence, Code Master provides in-depth knowledge and practical guidance.
+        </div><br>
+        <div class="para para-2">
+            In addition to the website, Code Master extends its reach through a dedicated application available for iOS and Android devices. The Code Master app enables users to access the platform's rich content and engage in interactive coding challenges anytime, anywhere. With its intuitive interface and user-friendly features, the app enhances the learning experience and allows users to code on the go.
+        </div><br>
+        <div class="para para-3">
+            Whether you're a beginner starting your coding journey or an experienced professional seeking to expand your skills, Code Master offers a supportive community where like-minded individuals can connect, collaborate, and learn from each other. With its domain and application, Code Master strives to be the go-to resource for those looking to master the art of coding and stay updated with the ever-evolving world of technology.
+        </div>
+    </section>
+    
+    <hr>
+
+    <section class="course" id="course">
+        <h2 class="heading">Course</h2>
+        <div class="courses">
+            <div class="course-item">
+                <a href="02_c.html">
+                    <img src="../01 Images/c-programming.png" alt="c-language">
+                    <p class="title">C</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="03_c++.html">
+                    <img src="../01 Images/cpp.png" alt="c-language">
+                    <p class="title">C++</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="04_java.html">
+                    <img src="../01 Images/java.png" alt="c-language">
+                    <p class="title">Java</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="05_python.html">
+                    <img src="../01 Images/python.png" alt="c-language">
+                    <p class="title">Python</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="06_html.html">
+                    <img src="../01 Images/html-tutorial.png" alt="c-language">
+                    <p class="title">HTML</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="07_css.html">
+                    <img src="../01 Images/css3.jpg" alt="c-language">
+                    <p class="title">CSS</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="08_js.html">
+                    <img src="../01 Images/javascript.png" alt="c-language">
+                    <p class="title">JavaScript</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="09_php.html">
+                    <img src="../01 Images/php.png" alt="c-language">
+                    <p class="title">PHP</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="#">
+                    <img src="../01 Images/c-programming.png" alt="c-language">
+                    <p class="title">c-language</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="#">
+                    <img src="../01 Images/c-programming.png" alt="c-language">
+                    <p class="title">c-language</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="#">
+                    <img src="../01 Images/c-programming.png" alt="c-language">
+                    <p class="title">c-language</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="#">
+                    <img src="../01 Images/c-programming.png" alt="c-language">
+                    <p class="title">c-language</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="#">
+                    <img src="../01 Images/c-programming.png" alt="c-language">
+                    <p class="title">c-language</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="#">
+                    <img src="../01 Images/c-programming.png" alt="c-language">
+                    <p class="title">c-language</p>
+                </a>
+            </div>
+            <div class="course-item">
+                <a href="#">
+                    <img src="../01 Images/c-programming.png" alt="c-language">
+                    <p class="title">c-language</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    
+    <section id="contact">
+        <h2 class="heading">Contact Us</h2>
+        <div class="form">
+            <form action="#">
+                <input type="text" id="Name" onkeyup="hideError()" placeholder="Enter Your Name">
+                <small class="error" id="name_msg"></small>
+                <input type="number" id="phNumber" onkeyup="hideError()" placeholder="Enter Your Phone Number">
+                <small class="error" id="phone_msg"></small>
+                <input type="email" id="email" onkeyup="hideError()" placeholder="Enter Your Email-id">
+                <small class="error" id="email_msg"></small>
+                <textarea cols="50" rows="2" id="query" onkeyup="hideError()" placeholder="Enter Your Query..."></textarea>
+                <small class="error" id="query_msg"></small>
+                
+                <!-- <input type="submit" class="btn" value="Submit"> -->
+                <div class="btn" id="btn">
+                    <button >Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <footer>
+        <div class="foot">
+            <div>&copy; Copyright 2023 | www.codemaster.com | All rights reserved | Developed By <span>Azaad Mottan</span></div>
+        </div>
+    </footer>
+
+    <script src="./01_web.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side Menu</title>
+
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .canvas {
+        font-size: 35px;
+        font-weight: 800;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .side-menu {
+        width: 25%;
+        height: 100vh;
+        background-color: black;
+        padding: 20px;
+        position: fixed;
+        top: 0px;
+        left: -30%;
+        transition: 1.2s;
+    }
+    .show-side-menu {
+        left: 0%;
+    }
+    .logo {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo img {
+        box-shadow: 0px 0px 10px 10px blue;
+        width: 90px;
+        height: 90px;
+        border: 2px solid white;
+        border-radius: 40px;
+    }
+    .close {
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    .submenu {
+        margin-top: 40px;
+    }
+    .submenu ul li {
+        list-style: none;
+        font-size: 23px;
+        padding: 18px;
+    }
+    .submenu ul li a {
+        text-decoration: none;
+        color: white;
+    }
+    .submenu a:hover {
+        color: rgb(98, 206, 248);
+    }
+    </style>
+</head>
+<body>
+    <span class="canvas" onclick="showMenu()">&#9776;</span>
+    <div class="side-menu" id="sidemenu">
+        <div class="logo">
+            <img src="../01 Images/crazylogo.jpg" alt="logo" />
+            <span class="close" onclick="hideMenu()">&times;</span>
+        </div>
+        <div class="submenu">
+            <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Course</a></li>
+            <li><a href="#">Fee Structure</a></li>
+            <li><a href="#">Enquiry</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showMenu() {
+            let menu = document.getElementById("sidemenu");
+            menu.classList.add("show-side-menu");
+
+            document.body.style.transition = "0.4s";
+            document.body.style.background = "rgba(0, 0, 0, 0.4)";
+        }
+
+        function hideMenu() {
+            let menu = document.getElementById("sidemenu");
+            menu.classList.remove("show-side-menu");
+
+            document.body.style.transition = "0.2s";
+            document.body.style.background = "none";
+        }
+        
+        window.addEventListener("click", function (event) {
+            let canvas = document.getElementsByClassName("canvas");
+            let sideMenu = document.getElementById("sidemenu");
+            let targetElement = event.target;
+
+            // Check if the clicked element is outside the side menu
+            // Additional code to handle other actions when clicking outside the side menu
+
+            // if (!canvas || !document.body.contains(targetElement)) {
+            if (!document.body.contains(targetElement)) {
+                sideMenu.classList.remove("show-side-menu");
+                
+                document.body.style.transition = "0.2s";
+                document.body.style.background = "none";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover, Visted & Active</title>
+    <style>
+        h1{
+            font-style: italic;
+            text-align: center;
+        }
+        #box{
+            box-sizing: border-box;
+            margin: auto;
+            width: 464px;
+            border-radius: 6px;
+            border: 1px solid black;
+            padding: 35px;
+            background-color: #ffe1e4;
+        }
+        .first{
+            font-size: 14px;
+            height: 20px;
+            padding: 6px 8px;
+            margin: 2px;
+            float: left;
+        }
+        .second{
+            font-size: 14px;
+            height: 20px;
+            padding: 6px 8px;
+            margin: 2px;
+            float: right;
+        }
+        .mail,.password{
+            font-size:14px;
+            height: 20px;
+            clear: both;
+            padding: 6px 8px;
+            margin: 2px ;
+        }
+        #password{
+            font-size: 14px;
+            height: 20px;
+            padding: 6px 8px;
+            margin: 2px;
+        }
+        #conform{
+            font-size: 14px;
+            height: 20px;
+            padding: 6px 8px;
+            margin: 2px;
+            float: right;
+        }
+        .letters{
+            clear: both;
+        }
+        a{
+            background-color: rgb(65, 240, 65);
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+        .btn{
+            background-color: rgb(65, 240, 65);
+            font-weight: bold;   
+            border: none;   
+            float: right;      
+        }
+        a:hover{
+            color: rgb(0, 0, 0);
+            background-color: rgb(13, 163, 33);
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+        .btn:hover{
+            color: rgb(0, 0, 0);
+            background-color: rgb(13, 163, 33);
+            cursor: pointer;
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+        /* .btn:visited{
+            font-weight: bold;
+            color: rgb(20, 19, 20);
+            background-color: rgb(177, 44, 166);
+        } */
+        </style>
+</head>
+
+<body>
+    <h1 id="head">HOVER, VISTED & ACTIVE</h1>
+    <div id="box">
+        <h3 class="google">Google</h3>
+        <h4>Create Your Google Account</h4>
+
+        <input class="first" type="text" placeholder="First name">
+
+        <input class="second" type="text" placeholder="Last name">
+
+        <div class="user">
+            <input class="mail" type="text" placeholder="Username"><span id="gmail">@gmail.com</span>
+        </div>   
+
+        <p>You can use letters numbers & periods</p>
+
+        <input id="password" class="password" type="password" placeholder="Password">
+
+        <input id="conform" class="password" type="password" placeholder="Conform password"><br>
+
+        <p class="letters">Use 8 or more characters with a mix of letters, numbers & symbols</p>
+
+        <p><input type="checkbox"><span>Show password</span></p>
+        
+        <a href="https://googgle.com">Stay sign in</a>
+
+        <button class="btn">Next</button>
+    </div>
+</body>
+</html>

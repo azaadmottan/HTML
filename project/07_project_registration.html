@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="07_project_data_entry.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navigation">
+        <ul>
+            <li><a href="#" id="empRegister">Home</a></li>
+            <li><a href="#" id="empData">Employee Data</a></li>
+        </ul>
+    </nav>
+
+    <!-- Registration Form -->
+
+    <div class="container" id="form">
+
+        <header><h2>Registration</h2></header>
+        <!-- <a href="07_project_data_display.html">
+            <button>Search</button>
+        </a> -->
+        <form action="#">
+            <!-- <div id="data"></div> -->
+            <div class="wrapper registration">
+                <div class="input_box name">
+                    <span class="details">Name</span>
+                    <input type="text" placeholder="Enter Name" name="name" class="fname" id="name" required>
+                    <!-- <span class="details">Last Name</span>
+                    <input type="text" placeholder="Enter Last Name" class="lname"> -->
+                    <!-- <span>Username</span> -->
+                    <!-- <input type="text" placeholder="Create Username"> -->
+                </div>
+                <div class="input_box username">
+                    <span class="details">Username</span>
+                    <input type="text" placeholder="Create Username" id="username" autocomplete="off" required>
+                </div>
+                <div class="input_box email">
+                    <span class="details">Email</span>
+                    <input type="email" placeholder="Enter Email Id" list="defaultEmail" id="email" autocomplete="off" required >
+                    <datalist id="defaultEmail">
+                        <option value="abc@gmail.com"></option>
+                        <option value="def@gmail.com"></option>
+                        <option value="ghi@gmail.com"></option>
+                        <option value="jkl@gmail.com"></option>
+                    </datalist>
+                </div>
+                <div class="input_box phone">
+                    <span class="details">Phone Number</span>
+                    <input type="tel" inputmode="numeric" minlength="10" maxlength="10" placeholder="Enter Phone Number" list="defaultTels" autocomplete="off" id="ph_number" required>
+                    <!-- pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" -->
+                    <datalist id="defaultTels">
+                        <option value="111-1111-1111"></option>
+                        <option value="122-2222-2222"></option>
+                        <option value="333-3333-3333"></option>
+                        <option value="344-4444-4444"></option>
+                    </datalist>
+                </div>
+                <div class="input_box address">
+                    <span class="details">Address</span>
+                    <input type="text" placeholder="Enter Address" id="address">
+                </div>
+                <div class="input_box pass-1">
+                    <span class="details">Create Password</span>
+                    <input type="text" placeholder="Create Password" id="pass_1" required>
+                </div>
+                <div class="input_box pass-2">
+                    <span class="details">Confirm Password</span>
+                    <input type="text" placeholder="Confirm Password" id="pass_2" required>
+
+                </div>
+                <div class="btn">
+                    <input type="submit" value="Submit" class="sbmt" id="submit">
+                </div>
+            </div>
+        </form>
+    </div>  
+
+    <!-- Employee Data -->
+
+    <div class="container employeeData" id="empContainer">
+        <header>
+            <h2>Employee Data</h2>
+        </header>
+        
+        <!-- <div class="data" id="data3">No Record Found !</div> -->
+        
+        <div class="field">
+            <div class="wrapper" id="wrapper2">
+                <div id="message"></div>
+                <!-- <div class="data_field">
+                    <div class="data" id="data3">No Record Found !</div>
+                    <div class="option">
+                        <div>
+                            <a href="07_project_registration.html">
+                                <button class="edit">
+                                    <img src="/HTML/01 Images/edit.png">
+                                </button>
+                            </a>
+                        <div>
+                        <div>
+                            <button class="delete">
+                                <img src="/HTML/01 Images/delete.png">
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+   </div>
+
+   <!-- Show Data Pop-up -->
+   <!-- <a href="/HTML/02 html/27_pract.html">popup</a> -->
+
+   <div class="popup" id="up">
+        <img src="/HTML/01 Images/tick1.png">
+        <h2>Welcome To Crazy Programmer</h2>
+        <p>
+            <div class="data data_field" id="showdata" text-align="center" style="height: 65%; padding: 5px; display: block;">No Record Found </div>
+        </p>
+        <div class="close">
+            <button onclick="closepop()" style="display: block; margin: 10px auto -10px; height: 35px; width: 60%; background-color: blue; color: white;">Close</button>
+        </div>
+    </div>
+
+</body>
+<script src="07_registration_form_data.js"></script>
+</html>

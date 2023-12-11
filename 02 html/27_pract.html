@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Web-page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            margin: auto;
+            width: 400px;
+            height: 250px;
+            padding: 40px;
+            border: 2px solid rgb(23, 184, 248);
+            border-radius: 8px;
+            /* display: none; */
+        }
+        /* .box {
+            max-width: 400px;
+        } */
+        input {
+            max-width: 377px;
+            margin-top: 30px;
+        }
+        button {
+            margin-top: 70px;
+            font-weight: 30px;
+        }
+        input,button {
+            width: 100%;
+            padding: 10px;
+            cursor: pointer ;
+            font-size: large;
+        }
+        .popup {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            /* top: ; */
+            text-align: center;
+            padding: 20px;
+            border: 2px solid rgb(5, 177, 245);
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: 600;
+            /* display: none; */
+            transform: translate(-50%, -50%) scale(0.1);
+            transition: transform 0.4s, top 0.4s;
+        }
+        .open-pop {
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            transition: transform 0.8s, top 0.4s;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            /* border: 2px solid rgb(247, 250, 250); */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+        }
+        .popup img {
+            margin-top: -33%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="mainbox">
+        <div class="box">
+            <div class="databox"> 
+                <input type="email" placeholder="Enter email">
+                <input type="email" placeholder="Confirm-email">
+
+            </div>
+            <button class="btn" id="openpop" onclick="openpop()">Submit</button>
+        </div>
+    </div>
+    <div class="popup" id="up">
+        <img src="/HTML/01 Images/tick1.png">
+        <h2>Welcome To Crazy Programmer</h2>
+        <p>
+            Registration Successfully !
+        </p>
+        <button onclick="closepop()">OK</button>
+    </div>
+
+    <script>
+        let popup = document.getElementById("up");
+        let box = document.getElementById("mainbox");
+        function openpop()
+        {
+            popup.classList.add("open-pop");
+            box.style.display = "none";
+            // popup.style.display = "block";
+        }
+        
+        function closepop()
+        {
+            popup.classList.remove("open-pop");
+            box.style.display = "block";
+        }
+    </script>
+</body>
+</html>

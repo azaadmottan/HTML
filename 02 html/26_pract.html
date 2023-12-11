@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle(Hide / Show)</title>
+</head>
+
+<style>
+    #btn{
+        padding: 10px 4px;
+        color: white;
+        background-color: rgb(233, 113, 113);
+        font: 20px;
+        margin: 20px;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+    #btn:hover{
+        background-color: red;
+    }
+</style>
+<body>
+    <h1>Toggle (Hide / Show)</h1>
+    <div id="container">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum eligendi officia quasi at ipsum dolore vel suscipit necessitatibus exercitationem accusamus eum facere omnis eius, nisi sequi porro. Aspernatur aperiam voluptate soluta eligendi tempora quam ad, quidem cum vitae quas voluptatibus ipsum culpa facilis temporibus molestiae totam odio tenetur! Explicabo minus assumenda unde nobis quae provident quam, nulla delectus quaerat soluta nesciunt. Est, dolorum! Animi esse est eveniet, maiores cum veritatis quam, voluptatibus blanditiis facilis quod corrupti. Minima, nesciunt accusantium rem laudantium iure similique veritatis explicabo eaque odit voluptatibus vel earum deleniti minus, mollitia placeat aut voluptatem. Doloremque ratione, alias veniam eligendi quasi esse cum assumenda aliquam voluptas modi harum autem expedita, doloribus optio eius id sequi suscipit saepe. Esse necessitatibus placeat soluta perferendis ipsum facilis dicta quia distinctio consectetur fuga totam aliquam, quisquam doloribus atque voluptatibus sunt. Dolor doloremque quae recusandae. Distinctio accusamus libero provident! Commodi necessitatibus sapiente, distinctio iste asperiores maxime quis blanditiis! Iure, dicta, veritatis adipisci quam amet, quaerat distinctio soluta asperiores eaque at reiciendis est odio atque deserunt? Illo voluptatum veniam accusantium velit vitae, nam culpa explicabo cupiditate ipsum, optio quaerat odit sit minus ullam. Adipisci quibusdam ad excepturi autem quod nulla cum corporis vel quidem maxime!
+    </div>
+    <button id="btn" onclick="toogle()">Hide / Show</button>
+    <script>
+        function toogle()
+        {
+            let para = document.getElementById('container');
+            let btn = document.getElementById('container');
+            if(btn.style.display != 'none')
+            {
+                btn.style.display = "none";
+            }
+            else
+            {
+                btn.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

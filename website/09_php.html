@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP</title>
+    <link rel="shortcut icon" href="../01 Images/fav-6.png" type="image/x-icon">
+    <link rel="stylesheet" href="02_web.css">
+
+</head>
+<body>
+    <header id="header" class="header head-resp">
+        <figure>
+            <a href="01_web.html"><h2>code<span>Master</span></h2>
+            </a>
+        </figure>
+        <div class="courses">
+            Course <span class="arrow">&#x27A4;</span>
+            <ul class="course-menu">
+                <li>C</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>Html</li>
+                <li>Css</li>
+                <li>JavaScript</li>
+                <li>Php</li>
+                <li>Mongo DB</li>
+                <li>My Sql</li>
+            </ul>
+        </div>
+        <div class="burger" id="burger" onclick="showNav()">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+        <div class="cross" id="cross" onclick="showNav()">&#9587</div>
+    </header>
+
+    <button onclick="topFunction()" id="topBtn">&#8679; Top</button>
+    
+    <span class="canvas" id="canvas" onclick="showSideMenu()">&#9776;</span>
+
+    <section class="side-menu" id="side-menu">
+        <h2>PHP</h2>
+        <div class="content">
+            <ul>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit.</li>
+            </ul>
+        </div>
+        <span class="close" id="close-menu" onclick="hideSideMenu()">&times;</span>
+
+    </section>
+
+    <section class="section-area" id="">
+        <h2 class="heading main-heading">C Programming Language Tutorial</h2>
+
+        <h2 class="heading">Introduction to C</h2>
+        <div class="para">
+            C is a general-purpose programming language that was developed in the early 1970s by Dennis Ritchie at Bell Laboratories. It is a high-level language that provides low-level access to computer memory through pointers, making it efficient and suitable for system-level programming.
+        </div>
+        <div class="para">
+            C is known for its simplicity, efficiency, and portability. It was designed to be a relatively small language with a minimal set of keywords and constructs, which makes it easy to learn and write code in. The language provides a structured approach to programming, allowing developers to break down programs into modules or functions.
+        </div>
+        <div class="para">
+            One of the key features of C is its ability to directly manipulate memory, which gives programmers precise control over the hardware. This feature makes C well-suited for developing operating systems, embedded systems, device drivers, and other system-level software.
+        </div>
+        <div class="para">
+            C is a procedural language, meaning that programs are organized into functions that manipulate data. It supports a wide range of data types, including integers, floating-point numbers, characters, and arrays. C also provides operators for performing arithmetic, logical, and bitwise operations on these data types.
+        </div>
+        <div class="para">
+            Another important aspect of C is its extensive standard library, which provides a collection of functions and macros that can be used to perform various operations, such as input/output, string manipulation, memory allocation, and mathematical computations.
+        </div>
+        <div class="para">
+            Learning C can be a valuable skill for aspiring programmers, as it provides a solid understanding of fundamental programming concepts and enhances problem-solving abilities. It's a language that emphasizes efficiency and control, making it suitable for various domains and giving developers a strong foundation for learning other programming languages.
+        </div>
+
+        <h2 class="heading">Structure of a C program</h2>
+        <div class="para">
+            The structure of a C program consists of various components that work together to define and execute the program. Here's a breakdown of the typical structure of a C program:
+        </div>
+
+        <ol class="para">
+            <li><span class="small-heading">Preprocessor Directives:</span> These are statements that begin with a hash symbol (#) and are processed by the preprocessor before the actual compilation. They are used to include header files, define constants, and perform other preprocessing tasks.</li>
+            <li><span class="small-heading">Header Files:</span> These files contain function prototypes and definitions necessary for the program. They are included using the #include directive at the beginning of the program. Commonly used header files include stdio.h for input/output operations, stdlib.h for memory allocation, math.h for mathematical functions, etc.</li>
+            <li><span class="small-heading">Global Declarations:</span> This section is used to declare global variables and define constants that can be accessed throughout the program. Global variables have a scope that extends across multiple functions.</li>
+            <li><span class="small-heading">Function Declarations:</span> Function declarations specify the return type, name, and parameters (if any) of the functions used in the program. They provide a way to inform the compiler about the existence of functions before they are defined or used.</li>
+            <li><span class="small-heading">Function:</span> Every C program must have a main function, which serves as the entry point of the program. It is where the program execution begins and ends. The main function may accept command-line arguments (int argc, char* argv[]), although it is not required.</li>
+            <li><span class="small-heading">Statements and Expressions:</span> Inside the main function (or other user-defined functions), you write the actual statements and expressions that perform the desired operations of the program. These can include variable declarations, assignment statements, control flow statements (if-else, switch-case), loops (for, while, do-while), function calls, and other C language constructs.</li>
+            <li><span class="small-heading">User-defined Functions:</span> You can define your own functions in addition to the main function to break down the program's logic into smaller, manageable pieces. These functions can have their own local variables and perform specific tasks within the program. Function definitions typically appear after the main function or in separate files.</li>
+            <li><span class="small-heading">Return Statements:</span> The main function (and other functions if applicable) should end with a return statement, which specifies a value to be returned to the calling function or the operating system. In the main function, a return statement with no value (or return 0;) indicates successful program execution.</li>
+        </ol>
+
+        <h2 class="heading">Program</h2>
+        <pre>
+            <code>
+                <span class="keyword">#include</span> < stdio.h >
+    
+                    // Global variable declaration
+                    <span class="keyword"> int</span> globalVariable = 10;
+                    
+                    // Function declaration
+                    <span class="keyword">int</span> <span class="funct">addNumbers</span>(int a, int b);
+                    
+                    // Main function
+                    <span class="keyword">int</span> <span>main</span>() {
+                        // Local variable declaration
+                        int x, y, sum;
+                        
+                        // Code statements
+                        <span class="keyword">printf</span>("Enter two numbers: ");
+                        <span class="keyword">scanf</span>("%d %d", &x, &y);
+                        
+                        // Function call
+                        sum = <span class="funct">addNumbers</span>(x, y);
+                        
+                        // Output result
+                        <span class="keyword">printf</span>("Sum: %d\n", sum);
+                        
+                        <span class="keyword">return</span> 0;
+                    }
+                    
+                    // Function definition
+                    <span class="keyword">int</span> <span class="funct">addNumbers</span>(int a, int b) {
+                        <span class="keyword">return</span> a + b;
+                    }
+                    
+            </code>
+        </pre>
+
+        <h2 class="heading">Data types in C</h2>
+        <div class="para">
+            In C programming, data types are used to define the type and size of data that variables can hold. Here are the commonly used data types in C:
+        </div>
+        <ol class="para">
+            <li><span class="small-heading">Integers</span>:
+                <ul type="square" class="items">
+                    <li><span class="small-heading">int</span>: Used to store whole numbers (both positive and negative) within a specified range.</li>
+                    <li><span class="small-heading">short</span>: Similar to int, but typically has a smaller range and requires less memory.</li>
+                    <li><span class="small-heading">long</span>: Similar to int, but typically has a larger range and may require more memory.</li>
+                    <li><span class="small-heading">unsigned int</span>: Used to store only non-negative whole numbers (zero and positive values).</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Floating-point Numbers</span>:
+                <ul class="items">
+                    <li><span class="small-heading">float</span>: Used to store single-precision floating-point numbers with decimal places.</li>
+                    <li><span class="small-heading">double</span>: Used to store double-precision floating-point numbers, providing higher precision than float.</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Characters</span>:
+                <ul class="items">
+                    <li><span class="small-heading">char</span>: Used to store individual characters or small integers. It can represent ASCII characters and other character sets.</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Arrays</span>:
+                <ul class="items">
+                    <li><span class="small-heading">int[], float[], char[], etc.</span>: Used to store the memory address of another variable. Pointers allow for dynamic memory allocation and efficient manipulation of memory.</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Structures</span>:
+                <ul class="items">
+                    <li><span class="small-heading">struct</span>: sed to define a custom data type that can hold multiple variables of different data types grouped together.</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Enumerations</span>:
+                <ul class="items">
+                    <li><span class="small-heading">enum</span>: Used to define a set of named constant values.</li>
+                </ul>
+            </li>
+            <li><span class="small-heading">Void</span>:
+                <ul class="items">
+                    <li><span class="small-heading">Void</span>: Used to indicate the absence of a value or when a function does not return any value.</li>
+                </ul>
+            </li>
+        </ol>
+
+    </section>
+
+
+     <script src="02_web.js"></script>
+</body>
+</html>

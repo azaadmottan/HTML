@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* margin:5px 20px; */
+    /* padding: 4px; */
+    background-color: rgb(236, 239, 245);
+}
+
+.nav_bar {
+    background-color: black;
+    margin-top: 4px;
+    width: 100%;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    /* position: fixed;  */
+}
+
+.nav_bar li {
+    /* color: red; */
+    list-style: none;
+    float: left;
+    padding: 15px 10px;
+    /* y-axis and x-axis*/
+    margin: -4px 25px;
+    /* top and right */
+}
+
+/* .nav_bar ul {
+    overflow: hidden;
+} */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: skyblue;
+}
+
+.nav_bar div{
+    /* float: right; */
+    /* margin: 0px 10px; */
+    padding: 9px 10px;
+}
+
+.nav_bar input {
+    text-align: center;
+    /* border: 2px solid black; */
+    /* padding: 2px 2px; */
+    margin: 1px 70px;
+    width: 10%;
+    border-radius: 6px;
+}
+
+.right{
+    text-align: right;
+}
+
+#logo {
+    position: fixed;
+    top: 9%;
+    right: 1%;
+}
+#myBtn {
+    display: none;                          /* Hidden by default */
+    position: fixed;                        /* Fixed/sticky position */
+    bottom: 20px;                           /* Place the button at the bottom of the page */
+    right: 30px;                            /* Place the button 30px from the right */
+    z-index: 99;                            /* Make sure it does not overlap */
+    border: none;                           /* Remove borders */
+    outline: none;                          /* Remove outline */
+    background-color: red;                /* Set a background color */
+    font-weight:bold;
+    color: white;                         /* Text color */
+    cursor: pointer;                        /* Add a mouse pointer on hover */
+    padding: 15px;                          /* Some padding */
+    border-radius: 10px;                    /* Rounded corners */
+    font-size: 18px;                        /* Increase font size */
+  }
+/* #top{
+    float: right;
+    color:black;
+    background-color: white;
+} */
+#img1 {
+    margin: 4px;
+    height: 650px;
+    width: 100%;
+}
+
+#img2 {
+    border-radius: 10px;
+    float: right;
+    width: 658px;
+    height: 774px;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.para0 {
+    background-color: white;
+}
+
+.container {
+    margin: 20px;
+}
+
+.box {
+    /* border: 1px solid black; */
+    /* padding: 10px; */
+    display: flex;
+}
+
+.about_ibm {
+    height: auto;
+    width: 600px;
+    padding: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    margin: 0px 30px;
+    background-color: white;
+}
+
+.whyAI {
+    /* border: 2px solid black; */
+    height: 884px;
+    padding: 20px;
+    background-color: white;
+}
+
+.ml p {
+    display: inline;
+}
+
+div .para1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.image_ibm {
+    /* display: flex; */
+    margin: 20px;
+    align-items: center;
+    width: 600px;
+    /* width: 20%; */
+    height: 400px;
+}
+
+.AIimages img {
+    border-radius: 30px;
+}
+
+table {
+    background-color: white;
+    width: 100%;
+}
+
+.courses {
+    display: flex;
+    margin: 20px;
+    background-color: rgb(248, 222, 226);
+
+}
+
+.box1 {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+footer {
+    background-color: #e1c0f3;
+    color: black;
+    height: 180px;
+}
+
+footer p {
+    margin: 25px;
+}

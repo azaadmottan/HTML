@@ -1,0 +1,73 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(130deg, #faf8f8, #7ab5f8);
+}
+
+.container {
+    background: linear-gradient(120deg, #23dfec, #8bf7c1);
+    border: 2px solid rgb(9, 33, 243);
+    border-radius: 10px;
+}
+
+.box {
+    margin: 12px;
+}
+.box form input {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+
+form .display {
+    display: flex;
+    justify-content: flex-end;
+}
+
+form .display input {
+    border: 2px solid rgb(45, 11, 241);
+    background-color: rgba(92, 91, 91, 0.993);
+    width: 100%;
+    font-size: 26px;
+    text-align: right;
+    margin: 18px 0;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.box form .allclear {
+    width: 142px;
+}
+
+.box form input:hover {
+    color: #03a1fc;
+}   
+
+.box form .allclear:hover {
+    color: red;
+}
+
+.box form .delete:hover {
+    color: red;
+}
+
+.box form .operator:hover {
+    background-color: #343535;
+    color: rgb(0, 38, 255);
+}
+
+.box form .equal:hover {
+    color: rgb(255, 3, 3);
+}

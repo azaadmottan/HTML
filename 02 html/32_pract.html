@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Effect</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background: radial-gradient(rgb(35, 35, 248), rgb(247, 89, 247));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+
+        }
+        .container {
+            width: 600px;
+            height: 200px;
+            background-color: white;
+            border-radius: 10px;
+            /* padding: 20px; */
+            position: relative;
+        }
+        .container h2 {
+            line-height: 200px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        /* .cursor {
+            position: absolute;
+            top: 38%;
+            right: 25%;
+            border-left: 2px solid red;
+            line-height: 200px;
+            height: 50px;
+            border-radius: 10px;
+            margin-left: 5px;
+
+        } */
+        .cursor {
+            position: absolute;
+            top: 38%;
+            width: 4px;
+            height: 50px;
+            margin-left: 3px;
+            background-color: red;
+            animation: blink 0.8s infinite;
+        }
+
+        /* .container p span.cursor.typing {
+        animation: none;
+        } */
+
+        @keyframes blink {
+            0% {
+                background-color: red;
+            }
+
+            49% {
+                background-color: transparent;
+            }
+            
+            50% {
+                background-color: red;
+            }
+
+            99% {
+                background-color: transparent;
+            }
+
+            100% {
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="typing-text">Hello, Good Morning</h2>
+        <!-- <span id="cursor"></span> -->
+    </div>
+
+    <script>
+        let textType = document.getElementById("typing-text");
+        // let cursor = document.getElementById("cursor");
+        let phrases = ['Software Developer.', 'Web Developer.', 'Android Developer.', 'Designer.', 'FreeLancer.'];
+
+        let i = 0, j = 0, currentPhrase = []; 
+        let isDeleting = false, isEnd = false;
+
+        const typing = () => {
+            
+            isEnd = false;
+
+            textType.innerHTML = currentPhrase.join("") + "<span id='cursor'></span>";
+            if (i < phrases.length)
+            {
+                // console.log(phrases[i]);
+
+                if (!isDeleting && j <= phrases[i].length)
+                {
+                    // console.log(phrases[i][j]);
+                    currentPhrase.push(phrases[i][j]);
+                    cursor.classList.add("cursor");
+                    // console.log("add a letter: " + " " + j)
+                    j++;
+                }
+                
+                if (isDeleting && j <= phrases[i].length)
+                {
+                    currentPhrase.pop(phrases[i][j]);
+                    cursor.classList.add("cursor");
+                    // console.log("remove a letter: " + " " + j)
+                    j--;
+                }
+                
+                if (j == phrases[i].length)
+                {
+                    isEnd = true;
+                    isDeleting = true;
+                }
+                if (isDeleting && j == 0)
+                {
+                    isDeleting = false;
+                    currentPhrase = [];
+                    j = 0;
+                    
+                    i++;
+                }
+    
+                if (i == phrases.length)
+                {
+                    i = 0;
+                }
+            }
+
+            
+
+            let speedUp = Math.random() * (80 - 40) + 40;
+            // let normalSpeed = Math.random() * (400 - 300) + 300;
+            let normalSpeed = 350;
+
+            let time = isEnd ? 600 : isDeleting ? speedUp : normalSpeed;
+            setTimeout(typing, time);
+        }
+
+        typing()
+        
+        
+    </script>
+</body>
+</html>

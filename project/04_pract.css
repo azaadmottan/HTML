@@ -1,0 +1,101 @@
+body {
+    background: rgba(18, 18, 18, 0.8) url('/HTML/01 Images/mac_ios.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: white;
+}
+
+div .head {
+    font-size: 30px;
+    text-align: center;
+    margin: 25px auto 30px;
+}
+
+.container {
+    /* background: linear-gradient(130deg, #ff0909, #57ff3f); */
+    background: rgba(0, 0, 0, 0.6);
+    border: 3px solid rgb(8, 79, 243);
+    border-radius: 6px;
+    margin: 150px auto 0px;
+    max-width: 30%;
+    max-height: 30%;
+}
+
+img {
+    width: 25px;
+    height: 25px;
+    margin: 4px auto 4px 10px;
+    filter: invert(100%) sepia(50%) saturate(50%) contrast(99%) brightness(100%);
+    /* display: flex; */
+}
+
+.eye{
+    position: relative;
+    left: 296px;
+    top: -35px;
+    cursor: pointer;
+}
+
+/* .eye-slash {
+    display: none;
+} */
+
+.eye-2 {
+    display: none;
+}
+
+.input-box {
+    margin: 50px auto;
+    /* display: flex; */
+}
+
+.box {
+    padding: 20px;    
+    margin: 0px 10px;
+}
+
+.box input {
+    width: 90%;
+}
+
+input {
+    font-size: 15px;
+    color: white;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    padding: 6px;
+    display: flex;
+    margin: auto;
+    /* width: 100%; */
+    background: none;
+}
+
+::placeholder {
+    color: rgb(133, 130, 130);
+}
+
+.btn button {
+    width: 90%;
+    margin: auto;
+}
+
+button {
+    font-size: 20px;
+    font: bold;
+    color: black;
+    background: linear-gradient(130deg, #ff0909, #57ff3f);
+    cursor: pointer;
+    /* width: 350px; */
+    display: flex;
+    justify-content: center;
+    margin: 85px auto 0;
+    border: 2px solid rgb(48, 242, 4);
+    border-radius: 6px;
+}
+
+.btn :hover {
+    background: linear-gradient(-130deg, #ff0909, #57ff3f);
+    border: 2px solid rgb(35, 8, 242);
+}

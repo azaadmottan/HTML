@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+    <div>local storage</div>
+    <div class="data"> <ul id="storedData"></ul></div>
+        <form>
+            <input type="text" placeholder="name" id="name">
+            <input type="text" placeholder="mail id" id="id">
+
+            <button onclick="data()">store</button>
+            <button onclick="view()">view</button>
+        </form>
+
+    <script>
+        function data() {
+            
+            let data = {
+                name : document.getElementById("name").value,
+                id : document.getElementById("id").value
+            };
+
+            localStorage.setItem("data", JSON.stringify(data));
+        }
+
+        function view() {
+
+            let personsData = JSON.parse(localStorage.getItem('data'));
+            
+            document.getElementsByClassName("data").innerHTML = personsData;
+            if (personsData) 
+            {
+               personsData.forEach(function(person) {
+
+                    var li = document.createElement('li');
+                    li.textContent = "Name: " + person.name + ", Age: " + person.age;
+                    storedData.appendChild(li);
+                });
+            }
+    }
+    </script>
+</body>
+</html>
